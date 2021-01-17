@@ -1,5 +1,5 @@
-# SPACE WARS
-This is an online calculatorbuilt using React
+# React Calculator
+This is an online calculator built using React
 
 # Live version
 [Live version](https://calculator-react-27.herokuapp.com/)
