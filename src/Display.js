@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ButtonPanel from './ButtonPanel';
 
-class Display extends React.Component {
-  render() {
-    return (
-      <div>
-  
-      </div>
-    )
-  }
-}
+const Display = () => (
+  <div>
+    <ButtonPanel />
+  </div>
+);
 
 Display.propTypes = {
   value: PropTypes.string
