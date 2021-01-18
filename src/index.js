@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from 'App';
 import './index.css';
 
-const title = 'React Calculator';
-
 ReactDOM.render(
-  <div className="title">
-    <h1>{ title }</h1>
-  </div>,
+  <App />,
   document.getElementById('root'),
 );
