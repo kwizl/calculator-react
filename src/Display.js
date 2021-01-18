@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonPanel from './ButtonPanel';
 
-const Display = () => (
+const Display = (props) => (
   <div>
     <ButtonPanel />
   </div>
