@@ -2,18 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ButtonPanel from './ButtonPanel';
 
-const Display = (props) => (
+const Display = ({ result }) => (
   <div>
+    <div>
+      {result}
+    </div>
     <ButtonPanel />
   </div>
 );
 
 Display.propTypes = {
-  value: PropTypes.string
+  result: PropTypes.string,
 };
 
 Display.defaultProps = {
-  value: 0
+  result: 0,
 };
 
 export default Display;

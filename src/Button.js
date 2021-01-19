@@ -1,21 +1,18 @@
-/* eslint-disable react/jsx-fragments */
+/* eslint-disable react/require-default-props */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Button extends React.Componets {
-  render() {
-    return (
-      <div>
-        <button className="square">
-          {props.value}
-        </button>
-      </div>
-    );
-  }
-}
+const Button = ({ name }) => (
+  <>
+    <button type="button" className="square">
+      {name}
+    </button>
+  </>
+);
 
 Button.propTypes = {
-  value: PropTypes.string,
+  name: PropTypes.string,
 };
 
 export default Button;
