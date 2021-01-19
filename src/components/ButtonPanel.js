@@ -2,7 +2,7 @@ import React from 'react';
 import Button from './Button';
 
 const ButtonPanel = () => {
-  const buttons = {
+  const groups = {
     'group-1': ['A/C', '+/-', '%', '÷'],
     'group-2': ['7', '8', '9', 'x'],
     'group-3': ['4', '5', '6', '-'],
@@ -12,10 +12,10 @@ const ButtonPanel = () => {
 
   const panelCalculator = [];
 
-  Object.keys(buttons).forEach(key => {
+  Object.keys(groups).forEach(key => {
     panelCalculator.push(
       <div className={key}>
-        {buttons[key].map(btn => (
+        {groups[key].map(btn => (
           <Button
             key={`btn_${btn}`}
             name={btn}
