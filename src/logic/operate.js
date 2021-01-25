@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-import Big from 'big';
+import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
   if (operation) {
