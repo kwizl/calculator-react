@@ -1,25 +1,49 @@
 import Big from 'big.js';
+import operate from './operate';
 
-const Calculate = (dataObject, buttonName) => {
+const calculate = (dataObject, buttonName) => {
   const { total, next, operation } = dataObject;
+  const operations = ['+', '-', 'x', '÷', '%'];
+
+  if (buttonName === 'A/C') {
+    return {
+      total: '',
+      next: '',
+      operation: '',
+    };
+  }
 
   if (buttonName === '+/-') {
     return {
-      next: (Big(next * -1)).toString(),
       total: (Big(total * -1)).toString(),
-      operation: null,
-    };
-  } else if (buttonName == 'A/C') {
-    return {
-      next: (0).toString(),
-      total: (0).toString(),
+      next: (Big(next * -1)).toString(),
       operation: '',
     };
-  } else if () {
-
-  } else {
-
   }
+
+  if (buttonName === '=') {
+    return {
+      total: operate(total, next, operation),
+      next: '',
+      operation: '',
+    };
+  }
+
+  if (operations.includes(buttonName)) {
+    if (next) {
+      return {
+        total: operate(total, next, operation),
+        next: '',
+        operation: buttonName,
+      };
+    }
+  }
+
+  return {
+    total,
+    next,
+    operation: buttonName,
+  };
 };
 
-export default Calculate;
+export default calculate;
