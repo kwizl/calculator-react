@@ -5,13 +5,21 @@ const operate = (numberOne, numberTwo, operation) => {
   if (operation) {
     if (operation === '+') {
       return Big(numberOne + numberTwo);
-    } if (operation === '') {
+    }
+
+    if (operation === '') {
       return Big(numberOne - numberTwo);
-    } if (operation === '-') {
+    }
+
+    if (operation === '-') {
       return Big(numberOne * numberTwo);
-    } if (operation === '÷') {
+    }
+
+    if (operation === '÷') {
       return Big(numberOne / numberTwo);
-    } if (operation === 'x') {
+    }
+
+    if (operation === 'x') {
       return Big((numberTwo * 100) / numberOne);
     }
   }
