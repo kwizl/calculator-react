@@ -7,11 +7,11 @@ const operate = (numberOne, numberTwo, operation) => {
       return Big(numberOne + numberTwo);
     }
 
-    if (operation === '') {
+    if (operation === '-') {
       return Big(numberOne - numberTwo);
     }
 
-    if (operation === '-') {
+    if (operation === 'x') {
       return Big(numberOne * numberTwo);
     }
 
@@ -19,8 +19,8 @@ const operate = (numberOne, numberTwo, operation) => {
       return Big(numberOne / numberTwo);
     }
 
-    if (operation === 'x') {
-      return Big((numberTwo * 100) / numberOne);
+    if (operation === '%') {
+      return Big((numberOne / 100));
     }
   }
 };

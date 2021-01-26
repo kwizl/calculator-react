@@ -29,6 +29,30 @@ const calculate = (dataObject, buttonName) => {
     };
   }
 
+  if (buttonName === '.') {
+    if (next) {
+      return {
+        total,
+        next: next.indexOf('.') === -1 ? `${next}.` : next,
+        operation,
+      };
+    }
+
+    if (total) {
+      return {
+        total: total.indexOf('.') === -1 ? `${total}.` : total,
+        next,
+        operation,
+      };
+    }
+
+    return {
+      total,
+      next,
+      operation,
+    };
+  }
+
   if (operations.includes(buttonName)) {
     if (next) {
       return {
