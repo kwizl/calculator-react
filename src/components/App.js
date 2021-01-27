@@ -5,8 +5,8 @@ import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 
 class App extends React.Component {
-  constructor(prop) {
-    super(prop);
+  constructor(props) {
+    super(props);
     this.state = {
       total: null,
       next: null,

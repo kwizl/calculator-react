@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Button from './Button';
 
@@ -33,6 +34,10 @@ const ButtonPanel = ({ onClick }) => {
       </div>
     </>
   );
+};
+
+ButtonPanel.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ButtonPanel;
