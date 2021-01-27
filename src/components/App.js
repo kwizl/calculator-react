@@ -10,20 +10,27 @@ class App extends React.Component {
     this.state = {
       total: null,
       next: null,
-      operation: null
+      operation: null,
     };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick = buttonName => {
+    this.setState(state => calculate(state, buttonName));
   }
 
   render() {
+    const { total, next, operation } = this.state;
     const title = 'React Calculator';
     return (
-      <>
+      <div>
         <div className="title">
           <h1>{ title }</h1>
         </div>
-        <Display value={this.prop.value} />
-        <ButtonPanel />
-      </>
+        <Display result={next} />
+        <ButtonPanel onClick={this.handleClick} />
+      </div>
     );
   }
 }

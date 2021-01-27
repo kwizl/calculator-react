@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
 
-const ButtonPanel = () => {
+const ButtonPanel = ({ onClick }) => {
   const groups = {
     'group-1': ['A/C', '+/-', '%', '÷'],
     'group-2': ['7', '8', '9', 'x'],
@@ -19,6 +19,7 @@ const ButtonPanel = () => {
           <Button
             key={`btn_${btn}`}
             name={btn}
+            onClick={onClick}
           />
         ))}
       </div>,
