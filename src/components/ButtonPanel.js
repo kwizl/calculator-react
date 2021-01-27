@@ -11,6 +11,10 @@ const ButtonPanel = ({ onClick }) => {
     'group-5': ['0', '.', '='],
   };
 
+  const handleClick = buttonName => {
+    onClick.clickHandler(buttonName);
+  };
+
   const panelCalculator = [];
 
   Object.keys(groups).forEach(key => {
@@ -18,7 +22,8 @@ const ButtonPanel = ({ onClick }) => {
       <div className={key}>
         {groups[key].map(btn => (
           <Button
-            key={`btn_${btn}`}
+            clickHandler={handleClick}
+            key={btn.toString()}
             name={btn}
             onClick={onClick}
           />
