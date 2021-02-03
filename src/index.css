@@ -15,3 +15,44 @@ body {
 .title {
   text-align: center;
 }
+
+.div-result {
+  text-align: center;
+  display: flex;
+  margin-left: calc((100% - 700px) / 2);
+  background-color: #868094;
+  height: 100px;
+  width: 700px;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+#result {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.square {
+  width: 25%;
+  height: 100px;
+  background-color: #DFDFDF;
+  text-align: center;
+  font-size: 24px;
+}
+
+.square:last-child {
+  background-color: #EF9800;
+}
+
+#btn_0 {
+  width: 50%;
+  height: 100px;
+}
