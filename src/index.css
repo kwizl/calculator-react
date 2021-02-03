@@ -41,7 +41,7 @@ body {
 }
 
 .square {
-  width: 25%;
+  width: 140px;
   height: 100px;
   background-color: #DFDFDF;
   text-align: center;
@@ -53,6 +53,6 @@ body {
 }
 
 #btn_0 {
-  width: 50%;
+  width: 280px;
   height: 100px;
 }
