@@ -1,9 +1,11 @@
 import React from 'react';
+import Navigation from './Navigation';
 
 const Home = () => (
   <div>
-    <h3>Welcome to our page!</h3>
-    <p>
+    <Navigation />
+    <h3 className="home-title">Welcome to our page!</h3>
+    <p className="home-content">
       https://math-magiciansA Web PageMath MagiciansLorem ipsum dolor sit amet,
       consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
       et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation

@@ -13,30 +13,30 @@ const ButtonPanel = ({ onClick }) => {
         <Button name="AC" clickHandler={handleClick} onClick={onClick} />
         <Button name="+/-" clickHandler={handleClick} onClick={onClick} />
         <Button name="%" clickHandler={handleClick} onClick={onClick} />
-        <Button color="button-orange" name="÷" clickHandler={handleClick} onClick={onClick} />
+        <Button color="orange" name="÷" clickHandler={handleClick} onClick={onClick} />
       </div>
       <div className="div-buttons">
         <Button name="7" clickHandler={handleClick} onClick={onClick} />
         <Button name="8" clickHandler={handleClick} onClick={onClick} />
         <Button name="9" clickHandler={handleClick} onClick={onClick} />
-        <Button color="button-orange" name="x" clickHandler={handleClick} onClick={onClick} />
+        <Button color="orange" name="x" clickHandler={handleClick} onClick={onClick} />
       </div>
       <div className="div-buttons">
         <Button name="4" clickHandler={handleClick} onClick={onClick} />
         <Button name="5" clickHandler={handleClick} onClick={onClick} />
         <Button name="6" clickHandler={handleClick} onClick={onClick} />
-        <Button color="button-orange" name="-" clickHandler={handleClick} onClick={onClick} />
+        <Button color="orange" name="-" clickHandler={handleClick} onClick={onClick} />
       </div>
       <div className="div-buttons">
         <Button name="1" clickHandler={handleClick} onClick={onClick} />
         <Button name="2" clickHandler={handleClick} onClick={onClick} />
         <Button name="3" clickHandler={handleClick} onClick={onClick} />
-        <Button color="button-orange" name="+" clickHandler={handleClick} onClick={onClick} />
+        <Button color="orange" name="+" clickHandler={handleClick} onClick={onClick} />
       </div>
       <div className="div-buttons">
-        <Button name="0" clickHandler={handleClick} onClick={onClick} />
+        <Button wide="zero" name="0" clickHandler={handleClick} onClick={onClick} />
         <Button name="." clickHandler={handleClick} onClick={onClick} />
-        <Button color="button-orange" name="=" clickHandler={handleClick} onClick={onClick} />
+        <Button color="orange" name="=" clickHandler={handleClick} onClick={onClick} />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
+import Navigation from './Navigation';
 
 const App = () => {
   const [state, setState] = useState({ total: null, next: null, operation: null });
@@ -13,6 +14,7 @@ const App = () => {
 
   return (
     <div>
+      <Navigation />
       <div className="title">
         <h1>React Calculator</h1>
       </div>

@@ -3,9 +3,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ name, onClick }) => (
+const Button = ({
+  name, onClick, wide, color,
+}) => (
   <>
-    <button onClick={() => onClick(name)} type="button" id={`btn_${name}`} className="square">
+    <button onClick={() => onClick(name)} type="button" id={`btn_${name}`} className={`square ${color} ${wide}`}>
       {name}
     </button>
   </>
@@ -14,6 +16,8 @@ const Button = ({ name, onClick }) => (
 Button.propTypes = {
   name: PropTypes.string,
   onClick: PropTypes.func.isRequired,
+  wide: PropTypes.string,
+  color: PropTypes.string,
 };
 
 export default Button;

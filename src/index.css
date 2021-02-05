@@ -17,12 +17,11 @@ body {
 }
 
 .div-result {
-  text-align: center;
   display: flex;
-  margin-left: calc((100% - 700px) / 2);
+  margin-left: calc((100% - 560px) / 2);
   background-color: #868094;
   height: 100px;
-  width: 700px;
+  width: 560px;
   font-size: 24px;
   color: white;
   font-weight: bold;
@@ -30,7 +29,10 @@ body {
 
 #result {
   display: flex;
+  width: 700px;
   justify-content: flex-end;
+  padding-top: 50px;
+  font-size: 32px;
 }
 
 .button-container {
@@ -55,4 +57,32 @@ body {
 #btn_0 {
   width: 280px;
   height: 100px;
+}
+
+.quote > h3 {
+  line-height: 16px;
+  margin: 200px 50px 50px 50px;
+}
+
+.navigation {
+  margin: 50px;
+  display: flex;
+}
+
+.navigation > h1 {
+  width: 50%;
+}
+
+.navigation > ul {
+  width: 50%;
+  text-align: end;
+}
+
+.home-title, .home-content {
+  margin: 50px;
+}
+
+#nav-id > li {
+  display: inline;
+  margin: 20px 10px 10px 10px;
 }
