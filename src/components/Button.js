@@ -20,4 +20,9 @@ Button.propTypes = {
   color: PropTypes.string,
 };
 
+Button.defaultProps = {
+  color: 'grey',
+  wide: 'large',
+};
+
 export default Button;

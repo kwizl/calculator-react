@@ -1,15 +1,17 @@
+/* eslint-disable prefer-const */
 import Big from 'big.js';
 import operate from './operate';
 
 const calculate = (dataObject, buttonName) => {
-  const { total, next, operation } = dataObject;
-  const operations = ['+', '-', 'x', '÷', '%'];
+  let { total, next, operation } = dataObject;
+  const operations = ['+', '-', 'x', '÷', '%', '='];
+  const buttonNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
   if (buttonName === 'A/C') {
     return {
-      total: '',
-      next: '',
-      operation: '',
+      total: null,
+      next: null,
+      operation: null,
     };
   }
 
@@ -24,8 +26,8 @@ const calculate = (dataObject, buttonName) => {
   if (buttonName === '=') {
     return {
       total: operate(total, next, operation),
-      next: '',
-      operation: '',
+      next: null,
+      operation: null,
     };
   }
 
@@ -60,6 +62,14 @@ const calculate = (dataObject, buttonName) => {
         next: '',
         operation: buttonName,
       };
+    }
+  }
+
+  if (buttonNumbers.includes(buttonName)) {
+    if (next != null) {
+      next += buttonName;
+    } else {
+      next = buttonName;
     }
   }
 

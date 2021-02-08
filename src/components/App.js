@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
@@ -18,7 +18,7 @@ const App = () => {
       <div className="title">
         <h1>React Calculator</h1>
       </div>
-      <Display result={state.next} />
+      <Display result={state.next ? state.next : state.total} />
       <ButtonPanel onClick={handleClick} />
     </div>
   );
